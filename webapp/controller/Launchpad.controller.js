@@ -4,6 +4,18 @@ sap.ui.define([
   "use strict";
 
   return Controller.extend("capstone.controller.Launchpad", {
+    onHomeIconPress: function () {
+      alert("홈 아이콘 클릭!");
+  },
+  onSearchIconPress: function () {
+      alert("검색 아이콘 클릭!");
+  },
+  onBellIconPress: function () {
+      alert("알림 아이콘 클릭!");
+  },
+  onAccountIconPress: function () {
+      alert("계정 아이콘 클릭!");
+  },
     onPressInventoryOrder: function () {
       alert("재고 주문으로 이동");
     },

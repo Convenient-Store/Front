@@ -3,14 +3,27 @@
   xmlns:mvc="sap.ui.core.mvc"
   xmlns:core="sap.ui.core"
   controllerName="capstone.controller.Launchpad">
-  <Page title="편의점 ERP">
+  <Page>
+  <headerContent>
+            <Bar>
+                <contentLeft>
+                    <core:Icon src="sap-icon://home" size="25px" press="onHomeIconPress"/>
+                </contentLeft>
+                <contentRight>
+                    <core:Icon src="sap-icon://search" size="25px" class="sapUiIconMargin" press="onSearchIconPress"/>
+                    <core:Icon src="sap-icon://bell" size="25px" class="sapUiIconMargin" press="onBellIconPress"/>
+                    <core:Icon src="sap-icon://account" size="25px" class="sapUiIconMargin" press="onAccountIconPress"/>
+                </contentRight>
+            </Bar>
+        </headerContent>
+
     <content>
       <VBox class="sapUiLargeMargin">
         <items>
-          <Title text="재고 관리" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="재고 관리" class="categoryTitle" />
           <HBox>
             <items>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="재고 주문" 
@@ -22,7 +35,7 @@
                   </StandardTile>
                 </content>
               </Panel>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="재고 주문 확인" 
@@ -34,7 +47,7 @@
                   </StandardTile>
                 </content>
               </Panel>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="재고량" 
@@ -49,10 +62,10 @@
             </items>
           </HBox>
           
-          <Title text="입고 및 일정 관리" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="입고 및 일정 관리" class="categoryTitle" />
           <HBox class="sapUiSmallMarginTop">
             <items>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="입고 일정" 
@@ -64,7 +77,7 @@
                   </StandardTile>
                 </content>
               </Panel>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="유통 기한" 
@@ -79,10 +92,10 @@
             </items>
           </HBox>
 
-          <Title text="판매" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="판매" class="categoryTitle" />
           <HBox class="sapUiSmallMarginTop">
             <items>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="지점별 판매량" 
@@ -94,7 +107,7 @@
                   </StandardTile>
                 </content>
               </Panel>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="프로모션" 
@@ -109,10 +122,10 @@
             </items>
           </HBox>
 
-          <Title text="재무" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="재무" class="categoryTitle" />
           <HBox class="sapUiSmallMarginTop">
             <items>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="판매 이익" 
@@ -124,7 +137,7 @@
                   </StandardTile>
                 </content>
               </Panel>
-              <Panel width="250px" class="sapUiSmallMargin">
+              <Panel width="250px" backgroundDesign="Transparent">
                 <content>
                   <StandardTile 
                     title="지출 내역" 
