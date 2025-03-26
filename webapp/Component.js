@@ -10,7 +10,7 @@ sap.ui.define([
 
     init: function () {
       // style.css 불러오기
-      jQuery.sap.includeStyleSheet("capstone/css/style.css");
+      jQuery.sap.includeStyleSheet("css/style.css");
 
       // 초기화
       UIComponent.prototype.init.apply(this, arguments);

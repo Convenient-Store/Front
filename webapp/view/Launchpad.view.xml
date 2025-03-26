@@ -7,7 +7,7 @@
     <content>
       <VBox class="sapUiLargeMargin">
         <items>
-          <Title text="재고 관리" class="categoryTitle sapUiSmallMarginBottom" />
+          <Title text="재고 관리" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
           <HBox>
             <items>
               <Panel width="250px" class="sapUiSmallMargin">
@@ -49,7 +49,7 @@
             </items>
           </HBox>
           
-          <Title text="입고 및 일정 관리" class="sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="입고 및 일정 관리" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
           <HBox class="sapUiSmallMarginTop">
             <items>
               <Panel width="250px" class="sapUiSmallMargin">
@@ -79,7 +79,7 @@
             </items>
           </HBox>
 
-          <Title text="판매" class="sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="판매" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
           <HBox class="sapUiSmallMarginTop">
             <items>
               <Panel width="250px" class="sapUiSmallMargin">
@@ -109,7 +109,7 @@
             </items>
           </HBox>
 
-          <Title text="재무" class="sapUiSmallMarginTop sapUiSmallMarginBottom" />
+          <Title text="재무" class="categoryTitle sapUiSmallMarginTop sapUiSmallMarginBottom" />
           <HBox class="sapUiSmallMarginTop">
             <items>
               <Panel width="250px" class="sapUiSmallMargin">

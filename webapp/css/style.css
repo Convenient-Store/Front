@@ -4,7 +4,7 @@ html, body, #content {
   padding: 0;
 }
 
-.tile-spacing {
-  margin-right: 1rem;  /* 오른쪽 여백 */
-  margin-bottom: 1rem; /* 아래 여백 */
+.categoryTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
