@@ -16,8 +16,20 @@ sap.ui.define([
     onPressSchedule: function () {
       alert("입고 일정정으로 이동");
     },
-    onPressonExpirationDate: function () {
+    onPressExpirationDate: function () {
       alert("유통 기한으로 이동");
+    },
+    onPressSalesDetail: function () {
+      alert("지점별 판매량으로 이동");
+    },
+    onPressPromotion: function () {
+      alert("프로모션으로 이동");
+    },
+    onPressSalesProfit: function () {
+      alert("판매 이익으로 이동");
+    },
+    onPressExpenditureDetails: function () {
+      alert("지출 내역으로 이동");
     }
   });
 });
