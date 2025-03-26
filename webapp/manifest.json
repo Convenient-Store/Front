@@ -61,7 +61,18 @@
           "pattern": "Stock_Order",
           "name": "Stock_Order",
           "target": "Stock_Order"
-      }
+      },
+      {
+        "pattern": "Stock_Order_History",
+        "name": "Stock_Order_History",
+        "target": "Stock_Order_History"
+    },
+    {
+      "pattern": "Stock",
+      "name": "Stock",
+      "target": "Stock"
+  }
+
       ],
       "targets": {
         "Launchpad": {
@@ -69,6 +80,12 @@
         },
         "Stock_Order": {
                     "viewName": "Stock_Order"
+                },
+        "Stock_Order_History": {
+                    "viewName": "Stock_Order_History"
+                },
+        "Stock": {
+                    "viewName": "Stock"
                 }
       }
     }

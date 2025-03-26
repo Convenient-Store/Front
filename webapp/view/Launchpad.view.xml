@@ -4,136 +4,138 @@
   xmlns:core="sap.ui.core"
   controllerName="capstone.controller.Launchpad">
   <Page>
-  <headerContent>
+    <headerContent>
             <Bar>
                 <contentLeft>
                     <core:Icon src="sap-icon://home" size="25px" press="onHomeIconPress"/>
                 </contentLeft>
                 <contentRight>
-                    <core:Icon src="sap-icon://search" size="25px" class="sapUiIconMargin" press="onSearchIconPress"/>
-                    <core:Icon src="sap-icon://bell" size="25px" class="sapUiIconMargin" press="onBellIconPress"/>
-                    <core:Icon src="sap-icon://account" size="25px" class="sapUiIconMargin" press="onAccountIconPress"/>
+                    <core:Icon src="sap-icon://search" size="25px" class="myIconMargin" press="onSearchIconPress"/>
+                    <core:Icon src="sap-icon://bell" size="25px" class="myIconMargin" press="onBellIconPress"/>
+                    <core:Icon src="sap-icon://account" size="25px" class="myIconMargin" press="onAccountIconPress"/>
                 </contentRight>
+                
             </Bar>
-        </headerContent>
+    </headerContent>
 
     <content>
       <VBox class="sapUiSmallMargin">
         <items>
           <Title text="재고 관리" class="categoryTitle" />
-          <HBox>
-            <items>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="재고 주문" 
-                    press="onPressInventoryOrder" 
-                    icon="sap-icon://cart-3"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>  
-              </Panel>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="재고 주문 확인" 
-                    press="onPressCheckInventoryOrder" 
-                    icon="sap-icon://customer-order-entry"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-              <Panel width="250px" backgroundDesign="Transparent">
-                
-                  <StandardTile 
-                    title="재고량" 
-                    press="onPressInventory" 
-                    icon="sap-icon://suitcase"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-            </items>
-          </HBox>
+            <HBox>
+              <items>
+                <Panel width="250px" backgroundDesign="Transparent">
+                  <GenericTile
+                      header="재고주문"
+                      press="onPressInventoryOrder">
+                  </GenericTile>
+                    
+                </Panel>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="재고 주문 내역"
+                      press="onPressCheckInventoryOrder">
+                      <TileContent>
+                          <NumericContent
+                              value="10"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+                <Panel width="250px" backgroundDesign="Transparent">
+                  
+                    <GenericTile
+                      header="재고"
+                      press="onPressCheckInventoryOrder">
+                      <TileContent>
+                          <NumericContent
+                              value="5546"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+              </items>
+            </HBox>
           
           <Title text="입고 및 일정 관리" class="categoryTitle" />
-          <HBox>
-            <items>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="입고 일정" 
-                    press="onPressSchedule" 
-                    icon="sap-icon://shipping-status"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="유통 기한" 
-                    press="onPressExpirationDate" 
-                    icon="sap-icon://cancel-maintenance"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-            </items>
-          </HBox>
+            <HBox>
+              <items>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="입고일정"
+                      press="onPressSchedule">
+                      <TileContent>
+                          <NumericContent
+                              value="10"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="유통기한"
+                      press="onPressExpirationDate">
+                      <TileContent>
+                          <NumericContent
+                              value="10"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+              </items>
+            </HBox>
 
           <Title text="판매" class="categoryTitle" />
-          <HBox>
-            <items>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="지점별 판매량" 
-                    press="onPressSalesDetail" 
-                    icon="sap-icon://detail-view"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="프로모션" 
-                    press="onPressPromotion" 
-                    icon="sap-icon://marketing-campaign"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-            </items>
-          </HBox>
+            <HBox>
+              <items>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="지점별 판매량"
+                      press="onPressSalesDetail">
+                      <TileContent>
+                          <NumericContent
+                              value="10"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="프로모션"
+                      press="onPressPromotion">
+                      <TileContent>
+                          <NumericContent
+                              value="10"
+                              indicator="Up"
+                              valueColor="Good" />
+                      </TileContent>
+                  </GenericTile>
+                </Panel>
+              </items>
+            </HBox>
 
           <Title text="재무" class="categoryTitle" />
-          <HBox>
-            <items>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="판매 이익" 
-                    press="onPressSalesProfit" 
-                    icon="sap-icon://bar-chart"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-              <Panel width="250px" backgroundDesign="Transparent">
-                  <StandardTile 
-                    title="지출 내역" 
-                    press="onPressExpenditureDetails" 
-                    icon="sap-icon://doc-attachment"
-                    type="Monitor"
-                    number="0"
-                    >
-                  </StandardTile>
-              </Panel>
-            </items>
-          </HBox>
+            <HBox>
+              <items>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="판매 이익"
+                      press="onPressSalesProfit">
+                  </GenericTile>
+                </Panel>
+                <Panel width="250px" backgroundDesign="Transparent">
+                    <GenericTile
+                      header="지출 내역"
+                      press="onPressExpenditureDetails">
+                  </GenericTile>
+                </Panel>
+              </items>
+            </HBox>
         </items>
       </VBox>
     </content>

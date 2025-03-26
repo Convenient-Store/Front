@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Controller) {
     "use strict";
 
-    return Controller.extend("capstone.controller.Stock_Order", {
+    return Controller.extend("capstone.controller.Stock_Order_History", {
         onHomeIconPress: function () {
             var oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("Launchpad")
