@@ -1,0 +1,34 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="capstone.controller.Launchpad">
+  <Page title="편의점 ERP">
+    <HBox class="sapUiSmallMargin">
+      <GenericTile header="재고 주문" press="onPressInventoryOrder" class="tile-spacing">
+        <!-- <Content>
+            <Icon src="sap-icon://add" size="3rem" />
+          </Content> -->
+      </GenericTile>
+      <GenericTile header="재고 주문 확인" press="onPressCheckInventoryOrder" class="tile-spacing">
+        <!-- <Content>
+            <Icon src="sap-icon://search" size="3rem" />
+          </Content> -->
+      </GenericTile>
+      <GenericTile header="재고량" press="onPressInventory" class="tile-spacing">
+        <!-- <Content>
+            <Icon src="sap-icon://inventory" size="3rem" />
+          </Content> -->
+      </GenericTile>
+    </HBox>
+
+    <HBox class="sapUiSmallMargin">
+      <GenericTile header="입고 일정" press="onPressSchedule" class="tile-spacing">
+
+      </GenericTile>
+      
+      <GenericTile header="유통 기한" press="onPressExpirationDate" class="tile-spacing">
+
+      </GenericTile>
+    </HBox>
+  </Page>
+</mvc:View>

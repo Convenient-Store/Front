@@ -1,0 +1,10 @@
+html, body, #content {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.tile-spacing {
+  margin-right: 1rem;  /* 오른쪽 여백 */
+  margin-bottom: 1rem; /* 아래 여백 */
+}
