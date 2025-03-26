@@ -1,34 +1,33 @@
 <mvc:View
-  xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
   controllerName="capstone.controller.Launchpad">
   <Page title="편의점 ERP">
     <HBox class="sapUiSmallMargin">
-      <GenericTile header="재고 주문" press="onPressInventoryOrder" class="tile-spacing">
-        <!-- <Content>
-            <Icon src="sap-icon://add" size="3rem" />
-          </Content> -->
-      </GenericTile>
-      <GenericTile header="재고 주문 확인" press="onPressCheckInventoryOrder" class="tile-spacing">
-        <!-- <Content>
-            <Icon src="sap-icon://search" size="3rem" />
-          </Content> -->
-      </GenericTile>
-      <GenericTile header="재고량" press="onPressInventory" class="tile-spacing">
-        <!-- <Content>
-            <Icon src="sap-icon://inventory" size="3rem" />
-          </Content> -->
-      </GenericTile>
+      <StandardTile title="재고 주문" press="onPressInventoryOrder" class="tile-spacing"
+        icon="sap-icon://cart-3">
+      </StandardTile>
+      <StandardTile title="재고 주문 확인" press="onPressCheckInventoryOrder" class="tile-spacing"
+        icon="sap-icon://customer-order-entry">
+
+      </StandardTile>
+      <StandardTile title="재고량" press="onPressInventory" class="tile-spacing"
+        icon="sap-icon://suitcase">
+
+      </StandardTile>
     </HBox>
 
     <HBox class="sapUiSmallMargin">
-      <GenericTile header="입고 일정" press="onPressSchedule" class="tile-spacing">
+      <StandardTile title="입고 일정" press="onPressSchedule" class="tile-spacing"
+        icon="sap-icon://shipping-status">
 
-      </GenericTile>
-      
-      <GenericTile header="유통 기한" press="onPressExpirationDate" class="tile-spacing">
+      </StandardTile>
 
-      </GenericTile>
+      <StandardTile title="유통 기한" press="onPressExpirationDate" class="tile-spacing"
+        icon="sap-icon://cancel-maintenance">
+
+      </StandardTile>
     </HBox>
   </Page>
 </mvc:View>
