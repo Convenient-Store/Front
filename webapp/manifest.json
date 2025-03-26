@@ -56,12 +56,20 @@
           "pattern": "",
           "name": "Launchpad",
           "target": "Launchpad"
-        }
+        },
+        {
+          "pattern": "Stock_Order",
+          "name": "Stock_Order",
+          "target": "Stock_Order"
+      }
       ],
       "targets": {
         "Launchpad": {
           "viewName": "Launchpad"
-        }
+        },
+        "Stock_Order": {
+                    "viewName": "Stock_Order"
+                }
       }
     }
   }

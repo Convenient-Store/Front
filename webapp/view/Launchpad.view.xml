@@ -18,140 +18,122 @@
         </headerContent>
 
     <content>
-      <VBox class="sapUiLargeMargin">
+      <VBox class="sapUiSmallMargin">
         <items>
           <Title text="재고 관리" class="categoryTitle" />
           <HBox>
             <items>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="재고 주문" 
                     press="onPressInventoryOrder" 
                     icon="sap-icon://cart-3"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#2c3e50">
-                  </StandardTile>
-                </content>
+                    >
+                  </StandardTile>  
               </Panel>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="재고 주문 확인" 
                     press="onPressCheckInventoryOrder" 
                     icon="sap-icon://customer-order-entry"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#34495e">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
+                
                   <StandardTile 
                     title="재고량" 
                     press="onPressInventory" 
                     icon="sap-icon://suitcase"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#2980b9">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
             </items>
           </HBox>
           
           <Title text="입고 및 일정 관리" class="categoryTitle" />
-          <HBox class="sapUiSmallMarginTop">
+          <HBox>
             <items>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="입고 일정" 
                     press="onPressSchedule" 
                     icon="sap-icon://shipping-status"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#8e44ad">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="유통 기한" 
                     press="onPressExpirationDate" 
                     icon="sap-icon://cancel-maintenance"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#16a085">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
             </items>
           </HBox>
 
           <Title text="판매" class="categoryTitle" />
-          <HBox class="sapUiSmallMarginTop">
+          <HBox>
             <items>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="지점별 판매량" 
                     press="onPressSalesDetail" 
                     icon="sap-icon://detail-view"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#8e44ad">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="프로모션" 
                     press="onPressPromotion" 
                     icon="sap-icon://marketing-campaign"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#16a085">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
             </items>
           </HBox>
 
           <Title text="재무" class="categoryTitle" />
-          <HBox class="sapUiSmallMarginTop">
+          <HBox>
             <items>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="판매 이익" 
                     press="onPressSalesProfit" 
                     icon="sap-icon://bar-chart"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#8e44ad">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
               <Panel width="250px" backgroundDesign="Transparent">
-                <content>
                   <StandardTile 
                     title="지출 내역" 
                     press="onPressExpenditureDetails" 
                     icon="sap-icon://doc-attachment"
                     type="Monitor"
                     number="0"
-                    backgroundColor="#16a085">
+                    >
                   </StandardTile>
-                </content>
               </Panel>
             </items>
           </HBox>
-
         </items>
       </VBox>
     </content>

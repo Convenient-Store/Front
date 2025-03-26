@@ -16,9 +16,11 @@ sap.ui.define([
   onAccountIconPress: function () {
       alert("계정 아이콘 클릭!");
   },
-    onPressInventoryOrder: function () {
-      alert("재고 주문으로 이동");
-    },
+  onPressInventoryOrder: function () {
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("Stock_Order")
+        },
+  
     onPressCheckInventoryOrder: function () {
       alert("재고 주문 확인으로 이동");
     },
