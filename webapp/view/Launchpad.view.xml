@@ -5,18 +5,8 @@
   controllerName="capstone.controller.Launchpad">
   <Page>
     <headerContent>
-            <Bar>
-                <contentLeft>
-                    <core:Icon src="sap-icon://home" size="25px" press="onHomeIconPress"/>
-                </contentLeft>
-                <contentRight>
-                    <core:Icon src="sap-icon://search" size="25px" class="myIconMargin" press="onSearchIconPress"/>
-                    <core:Icon src="sap-icon://bell" size="25px" class="myIconMargin" press="onBellIconPress"/>
-                    <core:Icon src="sap-icon://account" size="25px" class="myIconMargin" press="onAccountIconPress"/>
-                </contentRight>
-                
-            </Bar>
-    </headerContent>
+            <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
+        </headerContent>
 
     <content>
       <VBox class="sapUiSmallMargin">

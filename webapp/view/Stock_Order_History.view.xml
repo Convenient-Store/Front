@@ -5,16 +5,7 @@
     xmlns:core="sap.ui.core">
     <Page>
     <headerContent>
-            <Bar>
-                <contentLeft>
-                    <core:Icon src="sap-icon://home" size="25px" press="onHomeIconPress"/>
-                </contentLeft>
-                <contentRight>
-                    <core:Icon src="sap-icon://search" size="25px" class="sapUiIconMargin" press="onSearchIconPress"/>
-                    <core:Icon src="sap-icon://bell" size="25px" class="sapUiIconMargin" press="onBellIconPress"/>
-                    <core:Icon src="sap-icon://account" size="25px" class="sapUiIconMargin" press="onAccountIconPress"/>
-                </contentRight>
-            </Bar>
+            <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
         </headerContent>
         <content>
             <Text text="hello world"/>
