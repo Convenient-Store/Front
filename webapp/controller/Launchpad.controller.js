@@ -1,6 +1,6 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller",
-  "sap/m/Popover",
+    "sap/ui/core/mvc/Controller",
+    "sap/m/Popover",
     "sap/m/List",
     "sap/m/StandardListItem"
 ], function (Controller, Popover, List, StandardListItem) {
@@ -9,42 +9,48 @@ sap.ui.define([
   return Controller.extend("capstone.controller.Launchpad", {
 
       onPressInventoryOrder: function () {
-          var oRouter = this.getOwnerComponent().getRouter();
-          oRouter.navTo("Stock_Order");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("Stock_Order");
       },
 
       onPressCheckInventoryOrder: function () {
-          var oRouter = this.getOwnerComponent().getRouter();
-          oRouter.navTo("Stock_Order_History");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("Stock_Order_History");
       },
 
       onPressInventory: function () {
-          var oRouter = this.getOwnerComponent().getRouter();
-          oRouter.navTo("Stock");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("Stock");
       },
 
       onPressSchedule: function () {
-          alert("입고 일정으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("Schedule");
       },
 
       onPressExpirationDate: function () {
-          alert("유통 기한으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("ExpirationDate");
       },
 
       onPressSalesDetail: function () {
-          alert("지점별 판매량으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("SalesDetail");
       },
 
       onPressPromotion: function () {
-          alert("프로모션으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("Promotion");
       },
 
       onPressSalesProfit: function () {
-          alert("판매 이익으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("SalesProfit");
       },
 
       onPressExpenditureDetails: function () {
-          alert("지출 내역으로 이동");
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("ExpenditureDetails");
       }
   });
 });

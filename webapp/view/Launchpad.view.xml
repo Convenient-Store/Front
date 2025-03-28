@@ -5,8 +5,8 @@
   controllerName="capstone.controller.Launchpad">
   <Page>
     <headerContent>
-            <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
-        </headerContent>
+      <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
+    </headerContent>
 
     <content>
       <VBox class="sapUiSmallMargin">

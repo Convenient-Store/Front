@@ -57,36 +57,104 @@
           "name": "Launchpad",
           "target": "Launchpad"
         },
+
         {
           "pattern": "Stock_Order",
           "name": "Stock_Order",
           "target": "Stock_Order"
-      },
-      {
-        "pattern": "Stock_Order_History",
-        "name": "Stock_Order_History",
-        "target": "Stock_Order_History"
-    },
-    {
-      "pattern": "Stock",
-      "name": "Stock",
-      "target": "Stock"
-  }
+        },
 
+        {
+          "pattern": "Stock_Order_History",
+          "name": "Stock_Order_History",
+          "target": "Stock_Order_History"
+        },
+        
+        {
+          "pattern": "Stock",
+          "name": "Stock",
+          "target": "Stock"
+        },
+
+        {
+          "pattern": "ExpenditureDetails",
+          "name": "ExpenditureDetails",
+          "target": "ExpenditureDetails"
+        },
+
+        {
+          "pattern": "ExpirationDate",
+          "name": "ExpirationDate",
+          "target": "ExpirationDate"
+        },
+
+        {
+          "pattern": "Promotion",
+          "name": "Promotion",
+          "target": "Promotion"        
+        },
+
+        {
+          "pattern": "SalesDetail",
+          "name": "SalesDetail",
+          "target": "SalesDetail" 
+        },
+
+        {
+          "pattern": "SalesProfit",
+          "name": "SalesProfit",
+          "target": "SalesProfit" 
+        },
+
+        {
+          "pattern": "Schedule",
+          "name": "Schedule",
+          "target": "Schedule" 
+        }
+        
       ],
+
       "targets": {
         "Launchpad": {
           "viewName": "Launchpad"
         },
+        
         "Stock_Order": {
-                    "viewName": "Stock_Order"
-                },
+          "viewName": "Stock_Order"
+        },
+        
         "Stock_Order_History": {
-                    "viewName": "Stock_Order_History"
-                },
+          "viewName": "Stock_Order_History"
+        },
+        
         "Stock": {
-                    "viewName": "Stock"
-                }
+          "viewName": "Stock"
+        },
+
+        "ExpenditureDetails": {
+          "viewName": "ExpenditureDetails"
+        },
+        
+
+        "ExpirationDate": {
+          "viewName": "ExpirationDate"
+        },
+
+        "Promotion": {
+          "viewName": "Promotion"
+        },
+
+        "SalesDetail": {
+          "viewName": "SalesDetail"
+        },
+
+        "SalesProfit": {
+          "viewName": "SalesProfit"
+        },
+
+        "Schedule": {
+          "viewName": "Schedule"
+        }
       }
     }
   
