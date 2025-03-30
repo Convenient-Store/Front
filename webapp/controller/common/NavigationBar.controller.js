@@ -3,8 +3,8 @@ sap.ui.define([
     "sap/m/Popover",
     "sap/m/List",
     "sap/m/StandardListItem",
-    "sap/m/Button"
-], function (Controller, Popover, List, StandardListItem, Button) {
+    "sap/m/Input"
+], function (Controller, Popover, List, StandardListItem, Input) {
     "use strict";
 
     return Controller.extend("capstone.controller.common.NavigationBar", {
@@ -12,16 +12,52 @@ sap.ui.define([
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("Launchpad");
         },
-  
-        onSearchIconPress: function () {
-            alert("검색 아이콘 클릭!");
+
+        onSearchIconPress: function (oEvent) {
+            var oButton = oEvent.getSource();
+            var oView = this.getView();
+
+            if (!this._oSearchPopover) {
+                this._oSearchPopover = new Popover({
+                    title: "검색",
+                    placement: "Bottom",
+                    content: [
+                        new Input({
+                            placeholder: "검색어를 입력하세요",
+                            liveChange: this.onSearchLiveChange.bind(this)
+                        })
+                    ]
+                });
+                oView.addDependent(this._oSearchPopover);
+            }
+            this._oSearchPopover.openBy(oButton);
         },
-  
+
+        onSearchLiveChange: function (oEvent) {
+            var sSearchValue = oEvent.getParameter("value");
+            var oLaunchpadView = this.getView().getParent().getParent(); // Launchpad View 가져오기
+            var aTiles = oLaunchpadView.getContent()[0].getItems()[0].getItems(); // 타일 목록 가져오기
+
+            aTiles.forEach(function (oPanel) {
+                var oTile = oPanel.getContent()[0];
+                if (oTile.getHeader().includes(sSearchValue) && sSearchValue !== "") {
+                    // 타일이 보이도록 스크롤
+                    oTile.getDomRef().scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest"
+                    });
+                }
+            });
+            if (sSearchValue !== "") {
+                this._oSearchPopover.close();
+            }
+        },
+
         onBellIconPress: function (oEvent) {
             var oButton = oEvent.getSource();
             var oView = this.getView();
 
-            // Bell 전용 Popover 생성
             if (!this._oBellPopover) {
                 this._oBellPopover = new Popover({
                     title: "최근 알림",
@@ -37,19 +73,16 @@ sap.ui.define([
                     })
                 });
 
-                // 뷰에 종속성 추가
                 oView.addDependent(this._oBellPopover);
             }
 
-            // Bell Popover 열기
             this._oBellPopover.openBy(oButton);
         },
-  
+
         onAccountIconPress: function (oEvent) {
             var oButton = oEvent.getSource();
             var oView = this.getView();
 
-            // Account 전용 Popover 생성
             if (!this._oAccountPopover) {
                 this._oAccountPopover = new Popover({
                     title: "사용자 정보",
@@ -62,12 +95,10 @@ sap.ui.define([
                         ]
                     })
                 });
-                // 뷰에 종속성 추가
                 oView.addDependent(this._oAccountPopover);
             }
 
-            // Account Popover 열기
             this._oAccountPopover.openBy(oButton);
-        },
+        }
     });
 });
