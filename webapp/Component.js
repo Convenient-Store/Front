@@ -12,7 +12,7 @@ sap.ui.define([
       // style.css 불러오기
       jQuery.sap.includeStyleSheet("css/style.css");
 
-      // 초기화
+      // 초기화   //
       UIComponent.prototype.init.apply(this, arguments);
       this.getRouter().initialize();
     }
