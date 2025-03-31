@@ -2,7 +2,7 @@ sap.ui.define([
   "sap/ui/core/UIComponent"
 ], function (UIComponent) {
   "use strict";
-//test2
+//sex
   return UIComponent.extend("capstone.Component", {
     metadata: {
       manifest: "json"
