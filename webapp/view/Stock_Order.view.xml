@@ -7,8 +7,9 @@
         <headerContent>
             <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
         </headerContent>
-        <content>
-            <Text text="hello world"/>
-        </content>
+        <List items="{stockData>/results}"> 
+        <StandardListItem title="{stockData>ItemName}"
+                        description="[{stockData>ItemCategory}] {stockData>ItemBrand}, {stockData>ItemSize} ({stockData>ItemPrice}원)" />
+        </List>
     </Page>
 </mvc:View>
