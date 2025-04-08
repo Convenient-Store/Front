@@ -1,14 +1,64 @@
 <mvc:View
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc"
     controllerName="capstone.controller.Stock_Order"
-    xmlns:core="sap.ui.core">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+    displayBlock="true">
+
     <Page>
         <headerContent>
-            <mvc:XMLView viewName="capstone.view.common.NavigationBar"/>
+            <mvc:XMLView viewName="capstone.view.common.NavigationBar" />
         </headerContent>
+
         <content>
-            <Text text="hello world"/>
+            <table:Table
+                id="itemsTable"
+                rows="{/ZCAP_ITEMSSet}"
+                visibleRowCount="10"
+                selectionMode="Single"
+                enableColumnReordering="true"
+                width="auto">
+
+                <table:columns>
+                    <table:Column>
+                        <Label text="상품 ID" />
+                        <table:template>
+                            <Text text="{item_id}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column>
+                        <Label text="상품명" />
+                        <table:template>
+                            <Text text="{item_name}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column>
+                        <Label text="카테고리" />
+                        <table:template>
+                            <Text text="{item_category}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column>
+                        <Label text="가격" />
+                        <table:template>
+                            <Text text="{item_price}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column>
+                        <Label text="브랜드" />
+                        <table:template>
+                            <Text text="{item_brand}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column>
+                        <Label text="사이즈" />
+                        <table:template>
+                            <Text text="{item_size}" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
         </content>
     </Page>
 </mvc:View>
