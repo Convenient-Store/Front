@@ -19,7 +19,7 @@ sap.ui.define([
                 var style = document.createElement('style');
                 style.id = "highlight-style";
                 style.innerHTML = `
-    @keyframes blinkHighlight {
+     @keyframes blinkHighlight {
         0% { background-color: gray; }
         50% { background-color: transparent; }
         100% { background-color: gray; }
@@ -35,64 +35,46 @@ sap.ui.define([
             }
         },
 
-        onSearchIconPress: function (oEvent) {
-            var oButton = oEvent.getSource();
-            var oView = this.getView();
-
-            if (!this._oSearchPopover) {
-                this._oSearchPopover = new Popover({
-                    title: "검색",
-                    placement: "Bottom",
-                    content: [
-                        new Input({
-                            placeholder: "검색어를 입력하세요",
-                            submit: this.onSearchSubmit.bind(this)
-                        })
-                    ]
-                });
-                oView.addDependent(this._oSearchPopover);
-            }
-            this._oSearchPopover.openBy(oButton);
+        // ✅ 검색창에서 Enter로 검색
+        onSearchSubmitEnter: function (oEvent) {
+            var sValue = oEvent.getParameter("value");
+            this._searchAndScroll(sValue);
         },
 
-        onSearchSubmit: function (oEvent) {
-            var sSearchValue = oEvent.getParameter("value").trim().toLowerCase();
+        // ✅ 검색 아이콘 클릭 시 검색
+        onSearchSubmitButton: function () {
+            var sValue = this.byId("searchField").getValue();
+            this._searchAndScroll(sValue);
+        },
+
+        // ✅ 공통 검색 로직
+        _searchAndScroll: function (sSearchValue) {
+            sSearchValue = sSearchValue.trim().toLowerCase();
             if (!sSearchValue) return;
-        
-            // 전체 Launchpad View
+
             var oLaunchpadView = this.getView().getParent().getParent();
-            var oMainVBox = oLaunchpadView.$().find(".sapUiSmallMargin")[0]; // 왼쪽 본문 VBox (공지사항 제외)
-        
+            var oMainVBox = oLaunchpadView.$().find(".sapUiSmallMargin")[0];
             var matchingElement = null;
-        
-            // GenericTile 및 관련 요소에서만 탐색
+
             oMainVBox.querySelectorAll(".sapMGenericTile, .sapMGT, div").forEach(function (el) {
                 if (el.textContent && el.textContent.toLowerCase().includes(sSearchValue)) {
                     matchingElement = el;
                 }
             });
-        
+
             if (matchingElement) {
                 matchingElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
                 matchingElement.classList.remove("blinkingHighlight");
-
-                void matchingElement.offsetWidth; // ← reflow 강제 (애니메이션 재실행 트릭)
-    matchingElement.classList.add("blinkingHighlight");
+                void matchingElement.offsetWidth;
+                matchingElement.classList.add("blinkingHighlight");
             } else {
-                sap.m.MessageToast.show("검색 결과가 없습니다.");
+                MessageToast.show("검색 결과가 없습니다.");
             }
-        
-            this._oSearchPopover.close();
 
-            if (sSearchValue !== "") {
-                // ✅ 검색창 비우기
-                var aContent = this._oSearchPopover.getContent();
-                if (aContent.length > 0 && aContent[0].setValue) {
-                    aContent[0].setValue(""); // 검색어 초기화
-                }
-            
-                this._oSearchPopover.close();
-            }
+            // 검색어 초기화
+            var oInput = this.byId("searchField");
+            if (oInput) oInput.setValue("");
         },
 
         onBellIconPress: function (oEvent) {
