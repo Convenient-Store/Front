@@ -9,7 +9,7 @@ sap.ui.define([
 
     return Controller.extend("capstone.controller.common.NavigationBar", {
         onHomeIconPress: function () {
-            // ✅ 홈으로 가기 전에 이전 강조 제거!
+            // ✅ 홈으로 가기 전에 이전 강조 제거!!
             setTimeout(() => {
                 const highlighted = document.querySelectorAll(".blinkingHighlight");
                 highlighted.forEach(el => el.classList.remove("blinkingHighlight"));
