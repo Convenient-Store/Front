@@ -3,8 +3,9 @@ sap.ui.define([
     "sap/m/Popover",
     "sap/m/List",
     "sap/m/StandardListItem",
-    "sap/m/Input"
-], function (Controller, Popover, List, StandardListItem, Input) {
+    "sap/m/Input",
+    "sap/m/MessageToast"
+], function (Controller, Popover, List, StandardListItem, Input, MessageToast) {
     "use strict";
 
     return Controller.extend("capstone.controller.common.NavigationBar", {
@@ -14,31 +15,9 @@ sap.ui.define([
                 const highlighted = document.querySelectorAll(".blinkingHighlight");
                 highlighted.forEach(el => el.classList.remove("blinkingHighlight"));
             }, 0);
-            
+
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("Launchpad");
-        },
-
-        onInit: function () {
-            // 깜빡임 애니메이션용 스타일을 한 번만 추가
-            if (!document.getElementById("highlight-style")) {
-                var style = document.createElement('style');
-                style.id = "highlight-style";
-                style.innerHTML = `
-     @keyframes blinkHighlight {
-        0% { background-color: gray; }
-        50% { background-color: transparent; }
-        100% { background-color: gray; }
-    }
-
-    .blinkingHighlight {
-        animation: blinkHighlight 1s ease-in-out 3;
-        border-radius: 10px;
-        transition: background-color 0.3s ease-in-out;
-    }
-`;
-                document.head.appendChild(style);
-            }
         },
 
         // ✅ 검색창에서 Enter로 검색
@@ -128,6 +107,23 @@ sap.ui.define([
             }
 
             this._oAccountPopover.openBy(oButton);
+        },
+
+        onInit: function () {
+            // 플로팅 버튼을 SAPUI5 루트 영역에 추가
+            if (!document.getElementById("floatingFab")) {
+                 var btn = document.createElement("button");
+                 btn.id = "floatingFab";
+                 btn.innerText = "AI";
+                 btn.className = "sapMBtn sapMBtnEmphasized"; // SAPUI5 스타일 적용
+                btn.onclick = this.onFloatingFabPress.bind(this);
+                 document.body.appendChild(btn);
+            }
+        },
+
+        // 플로팅 버튼 클릭 핸들러
+        onFloatingFabPress: function () {
+            sap.m.MessageToast.show("FAB 클릭됨!");
         }
     });
 });

@@ -28,4 +28,5 @@
             <core:Icon src="sap-icon://account" size="25px" class="myIconMargin" press="onAccountIconPress" />
         </contentRight>
     </Bar>
+  
 </mvc:View>
